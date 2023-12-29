@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-
-
+import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+import { lazy } from "react";
+const Dashboard = lazy(()=>import("./pages/dashboard"));
 function App() {
 
   return (
-    <>
-      <h1>Hello world</h1>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/admin/dashboard" element={<Dashboard/>}/>
+      </Routes>
+    </Router>
   )
 }
 
