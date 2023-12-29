@@ -1,6 +1,19 @@
+@import './mixin';
+
 :root{
-  font-family:Inter, System-ui,;
+  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  // color: black;
 }
