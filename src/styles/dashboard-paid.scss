@@ -1,0 +1,9 @@
+@import './mixin';
+.maindashboard{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: blue;
+  align-items: center;
+  gap: 20px;
+}
