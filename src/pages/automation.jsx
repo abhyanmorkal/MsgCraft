@@ -1,15 +1,19 @@
-import React from 'react'
-import MainSidebar from '../components/mainsidebar/MainSidebar'
+import React from "react";
+import MainSidebar from "../components/mainsidebar/MainSidebar";
+import FirstHeader from "../components/header/FirstHeader";
+import MainHeading from "../components/header/MainHeading";
+
 
 const automation = () => {
   return (
     <div className="maindashboard">
-      <div className="mainSidebar">
-        <MainSidebar />
+      <MainSidebar />
+      <div className="body">
+        <FirstHeader></FirstHeader>
+        <MainHeading></MainHeading>
       </div>
-      <div>automation</div>
     </div>
-  )
-}
+  );
+};
 
-export default automation
+export default automation;
