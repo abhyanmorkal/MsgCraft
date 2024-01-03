@@ -1,12 +1,15 @@
 import React from 'react'
+import './IconFram.scss'
 
 
 const IconFrame = ({title,src,alt}) => {
   return (
-    <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+   
+      <div className='iconbox' >
       <img src={src} alt={alt} />
       <p>{title}</p>
     </div>
+   
   )
 }
 

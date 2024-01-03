@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import MainSidebar from '../components/mainsidebar/MainSidebar'
 
 const chat = () => {
   return (
-    <div>chat</div>
-  )
-}
+    <div className="maindashboard">
+      <div className="mainSidebar">
+        <MainSidebar />
+      </div>
+      <div>Chat</div>
+    </div>
+  );
+};
 
-export default chat
+export default chat;

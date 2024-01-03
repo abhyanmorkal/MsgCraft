@@ -1,0 +1,31 @@
+
+.iconbox{
+  display: flex;
+  padding: 0.4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.5rem;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  // background-color: aqua;
+  p{
+    width: 3rem;
+    text-decoration: none;
+    color: #27241D;
+  }
+  
+}
+.iconbox:hover{
+  background-color: #FACDCD;
+}
+.iconbox:active{
+  background-color: #f9bdbd;
+}
+
+
