@@ -1,0 +1,64 @@
+.mainSideBar {
+  width: 5rem;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  background-color: #FAF9F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  box-shadow: 2px 0px 10px 0px rgba(0, 0, 0, 0.05);
+  border-right: 0.2px solid rgba(39, 36, 29, 0.3058823529);
+  position: sticky;
+  top: 0;
+}
+.mainSideBar::-webkit-scrollbar {
+  display: none;
+}
+
+.logo {
+  width: 3.5rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.profile {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #BA2525;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.profile p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #FAF9F7;
+}
+
+.menuContener {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.menuContener1 {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}/*# sourceMappingURL=MainSidebar.css.map */

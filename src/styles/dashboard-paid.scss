@@ -1,0 +1,12 @@
+@import './mixin';
+.maindashboard{
+  display: flex;
+  width: 100%;
+  // min-height: 100vh;
+  
+
+}
+.body{
+  width: 100vw;
+  overflow:hidden;
+}
