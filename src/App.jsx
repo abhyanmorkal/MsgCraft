@@ -4,13 +4,13 @@ import Loading from "./components/Loading";
 
 const Dashboard = lazy(() => import("./pages/dashboard-paid"));
 const DashboardUnP = lazy(() => import("./pages/dashboard-unpaid"));
-const Chat = lazy(() => import("./pages/chat"));
-const Contact = lazy(() => import("./pages/contact"));
-const Automation = lazy(() => import("./pages/automation"));
-const Campaign = lazy(() => import("./pages/campaign"));
-const Analytic = lazy(() => import("./pages/analytic"));
-const Help = lazy(() => import("./pages/help"));
-const Setting = lazy(() => import("./pages/setting"));
+const Chat = lazy(() => import("./pages/chat/chat"));
+const Contact = lazy(() => import("./pages/contats/contact"));
+const Automation = lazy(() => import("./pages/automation/automation"));
+const Campaign = lazy(() => import("./pages/campaign/campaign"));
+const Analytic = lazy(() => import("./pages/analytic/analytic"));
+const Help = lazy(() => import("./pages/help/help"));
+const Setting = lazy(() => import("./pages/setting/setting"));
 
 function App() {
   return (

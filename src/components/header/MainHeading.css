@@ -1,4 +1,4 @@
-.mainHeading{
+.mainHeading {
   width: 100%;
   height: 3rem;
   background-color: #BA2525;
@@ -6,21 +6,21 @@
   align-items: center;
   padding: 0 3rem;
   justify-content: space-between;
-  // position: sticky;
-  // top: 0;
-  
 }
-.brandName{
+
+.brandName {
   font-weight: 600;
   color: #FAF9F7;
   font-size: 1.2rem;
 }
-.leftMenu{
+
+.leftMenu {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
-.currentPlan{
+
+.currentPlan {
   display: flex;
   gap: 0.5rem;
   align-items: flex-end;
@@ -28,29 +28,31 @@
   color: #FFF;
   font-weight: 500;
 }
-.upgradButton{
+
+.upgradButton {
   display: flex;
   background-color: #F0B429;
   padding: 0.2rem 1rem;
   border-radius: 0.2rem;
 }
-.notificationicon{
+
+.notificationicon {
   width: 24px;
   height: 24px;
-  
 }
-.hamburg{
+
+.hamburg {
   display: none;
-  
 }
-@media (max-width:600px) {
-  .leftMenu{
+
+@media (max-width: 600px) {
+  .leftMenu {
     display: none;
   }
-  .hamburg{
-    display:flex;
+  .hamburg {
+    display: flex;
   }
-  .mainHeading{
+  .mainHeading {
     padding: 0 1rem;
   }
-}
+}/*# sourceMappingURL=MainHeading.css.map */

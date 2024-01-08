@@ -1,11 +1,12 @@
 import React from 'react'
-import MainSidebar from '../components/mainsidebar/MainSidebar'
-import FirstHeader from '../components/header/FirstHeader'
-import MainHeading from '../components/header/MainHeading'
+import MainSidebar from '../../components/mainsidebar/MainSidebar'
+import FirstHeader from '../../components/header/FirstHeader'
+import MainHeading from '../../components/header/MainHeading'
+import "./analytic.scss"
 
 const analytic = () => {
   return (
-    <div className="maindashboard">
+    <div className="main">
         <MainSidebar />
         <div className="body">
         <FirstHeader></FirstHeader>

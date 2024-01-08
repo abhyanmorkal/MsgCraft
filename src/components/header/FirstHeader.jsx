@@ -5,7 +5,7 @@ import "./FirstHeader.scss"
 const FirstHeader = () => {
   return (
     <div className='first-heading'>
-      <a className="sub-heading" href='#'>Welcome to MsgCraft- A powerful WhatsApp Business platform to grow your online sales.</a>
+      <a className="sub-heading" href='#'>Welcome to MessBee- A powerful WhatsApp Business platform to grow your Business.</a>
     </div>
   )
 }
