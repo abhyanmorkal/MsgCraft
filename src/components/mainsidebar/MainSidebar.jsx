@@ -25,7 +25,7 @@ const MainSidebar = () => {
       <div className="menuContener">
         <Link to="/admin/chat" location={location}>
           <IconFrame
-            title="chat"
+            title="Chat"
             src={icon}
             alt={"chat icon"}
             url={"/admin/chat"}
@@ -43,11 +43,11 @@ const MainSidebar = () => {
       </div>
       <div className="menuContener1">
         <Link to="/admin/analytic" location={location}>
-          <IconFrame title="Analytic" src={analytic} alt={"chat icon"} />
+          <IconFrame title="Analytics" src={analytic} alt={"chat icon"} />
         </Link>
 
         <Link to="/admin/setting" location={location}>
-          <IconFrame title="Setting" src={setting} alt={"chat icon"} />
+          <IconFrame title="Settings" src={setting} alt={"chat icon"} />
         </Link>
         <Link to="/admin/help" location={location}>
           <IconFrame title="Help" src={help} alt={"chat icon"} />

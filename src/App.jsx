@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Loading from "./components/Loading";
+import { ConfigProvider, Typography } from "antd";
 
 const Dashboard = lazy(() => import("./pages/dashboard-paid"));
 const DashboardUnP = lazy(() => import("./pages/dashboard-unpaid"));
@@ -14,22 +15,30 @@ const Setting = lazy(() => import("./pages/setting/setting"));
 
 function App() {
   return (
-    <Router>
-      <Suspense fallback={<Loading />}>
-        <Routes>
-          {/* Main pages */}
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/admin/dashboardUnp" element={<DashboardUnP />} />
-          <Route path="/admin/chat" element={<Chat />} />
-          <Route path="/admin/contact" element={<Contact />} />
-          <Route path="/admin/campaign" element={<Campaign />} />
-          <Route path="/admin/automation" element={<Automation />} />
-          <Route path="/admin/analytic" element={<Analytic />} />
-          <Route path="/admin/help" element={<Help />} />
-          <Route path="/admin/setting" element={<Setting />} />
-        </Routes>
-      </Suspense>
-    </Router>
+    <ConfigProvider
+      theme={{
+        token: {
+          fontFamily: "Poppins",
+        },
+      }}
+    >
+      <Router>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            {/* Main pages */}
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/admin/dashboardUnp" element={<DashboardUnP />} />
+            <Route path="/admin/chat" element={<Chat />} />
+            <Route path="/admin/contact" element={<Contact />} />
+            <Route path="/admin/campaign" element={<Campaign />} />
+            <Route path="/admin/automation" element={<Automation />} />
+            <Route path="/admin/analytic" element={<Analytic />} />
+            <Route path="/admin/help" element={<Help />} />
+            <Route path="/admin/setting" element={<Setting />} />
+          </Routes>
+        </Suspense>
+      </Router>
+    </ConfigProvider>
   );
 }
 
