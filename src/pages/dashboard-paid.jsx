@@ -5,11 +5,9 @@ import FirstHeader from "../components/header/FirstHeader";
 import MainHeading from "../components/header/MainHeading";
 import Infobox from "../components/infobox/infobox";
 import { Card } from "antd";
-import ButtonIcon from "../assets/svgicon/rupess.svg";
+import Button from "../components/button/Button";
 
 function Dashboard() {
-  const [infobox, setInfobox] = useState();
-  const { Meta } = Card;
   return (
     <div className="main">
       <MainSidebar />
@@ -111,15 +109,7 @@ function Dashboard() {
           <hr />
           <div className="offer-container">
             <p>🎁 Get WCC as cash-back upto ₹999 on recharge.</p>
-            <div
-              className="button"
-              onClick={() => {
-                console.log("hello world");
-              }}
-            >
-              <img src={ButtonIcon} alt="payment icon" />
-              <strong>New Payment</strong>
-            </div>
+            <Button title="NEW PAYMENT" />
           </div>
         </div>
       </div>
@@ -127,3 +117,15 @@ function Dashboard() {
   );
 }
 export default Dashboard;
+
+{
+  /* <div
+  className="button"
+  onClick={() => {
+    console.log("hello world");
+  }}
+>
+  <img src={ButtonIcon} alt="payment icon" />
+  <strong>New Payment</strong>
+</div> */
+}
