@@ -19,6 +19,7 @@ function App() {
       theme={{
         token: {
           fontFamily: "Poppins",
+          colorPrimary: "#ba2525",
         },
       }}
     >

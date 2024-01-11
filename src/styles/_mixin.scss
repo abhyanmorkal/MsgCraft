@@ -54,3 +54,8 @@ $fs-normal: 1.2rem;
   padding: $padding;
   border-radius: $borderRadius;
 }
+
+%hr {
+  border-top: 1px solid #32323275;
+  border-bottom: none;
+}

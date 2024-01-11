@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const ChatInbox = () => {
   return (
-    <div><p>hello world</p></div>
-  )
-}
+    <div>
+      <p>chat box</p>
+    </div>
+  );
+};
 
-export default ChatInbox
+export default ChatInbox;
