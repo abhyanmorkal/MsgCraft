@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Loading from "./components/Loading";
-import { ConfigProvider, Typography } from "antd";
+import { ConfigProvider } from "antd";
 
 const Dashboard = lazy(() => import("./pages/dashboard-paid"));
 const DashboardUnP = lazy(() => import("./pages/dashboard-unpaid"));

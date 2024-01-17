@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AppstoreOutlined, MailOutlined, FundFilled } from "@ant-design/icons";
 import { Menu } from "antd";
 import "./infobox.scss";
@@ -17,7 +17,7 @@ const Infobox = () => {
   return (
     <div className="info-container">
       <div className="heading">
-        <h3>Chat</h3>
+        <h2 id="heading">Chat</h2>
       </div>
       <hr />
       <div className="menu">

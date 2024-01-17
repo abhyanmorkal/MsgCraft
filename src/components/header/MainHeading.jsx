@@ -19,7 +19,7 @@ const MainHeading = () => {
           <img src={plan} alt="plan icon" />
         </div>
         {/* <div className="upgradButton">Upgrade</div> */}
-        <YellowButton title="UPGRADE"></YellowButton>
+        <YellowButton title="UPGRADE" padding="0.5rem 0.7rem"></YellowButton>
         <div className="notificationicon">
           <img src={notification} alt="notificatin-icon" />
         </div>

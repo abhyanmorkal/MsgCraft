@@ -6,7 +6,7 @@
   border-right: 1px solid #32323275;
   // background-color: rgba(0, 0, 255, 0.192);
 
-  .heading {
+  #heading {
     padding: 1rem;
     @extend %heading;
     color: $clr-heading;

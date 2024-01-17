@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "../styles/dashboard-paid.scss";
 import MainSidebar from "../components/mainsidebar/MainSidebar";
 import FirstHeader from "../components/header/FirstHeader";
@@ -16,7 +15,7 @@ function Dashboard() {
         <MainHeading></MainHeading>
         <div className="main-container">
           <div className="feature-heading">
-            <p>Explore MessBee's Feature</p>
+            <p>Explore MessBee&#39;s Feature</p>
           </div>
           <hr></hr>
           <div className="content">

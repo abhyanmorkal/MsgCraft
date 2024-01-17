@@ -1,9 +1,9 @@
-import React from "react";
 import MainSidebar from "../../components/mainsidebar/MainSidebar";
 import "./chat.scss";
 import Infobox from "./Infobox";
 import { Input } from "antd";
-import ContactCard from "./ContactCard";
+import "react-chat-elements/dist/main.css";
+import { ChatList } from "react-chat-elements";
 const { Search } = Input;
 
 const onSearch = (value, _e, info) => console.log(info?.source, value);
@@ -24,6 +24,15 @@ const chat = () => {
               />
             </div>
             {/* <ContactCard /> */}
+            <div className="chat-wraper">
+              <ChatList
+                className="chat-list"
+                dataSource={chatData}
+                onClick={() => {
+                  console.log("helloworld");
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -32,3 +41,102 @@ const chat = () => {
 };
 
 export default chat;
+
+const chatData = [
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=8",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 1,
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=4",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 3,
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=4",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 3,
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=4",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 3,
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=4",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 3,
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=4",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 3,
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=4",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 3,
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=4",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 3,
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=4",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 3,
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=4",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 3,
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=4",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 3,
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/80540635?v=4",
+    alt: "kursat_avatar",
+    title: "Abhi",
+    subtitle: "Why don't we go to the No Way Home movie this weekend ?",
+    date: new Date(),
+    unread: 3,
+  },
+];

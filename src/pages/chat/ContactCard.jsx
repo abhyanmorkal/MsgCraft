@@ -1,4 +1,3 @@
-import React from "react";
 import "./contactcard.scss";
 import random from "../../assets/svgicon/Ellipse 41.svg";
 

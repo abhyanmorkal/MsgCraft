@@ -1,16 +1,19 @@
-import React from "react";
 import MainSidebar from "../../components/mainsidebar/MainSidebar";
-import FirstHeader from "../../components/header/FirstHeader";
-import MainHeading from "../../components/header/MainHeading";
-import "./contact.scss"
+import "./contact.scss";
+import TableData from "./TableData";
+import { SubHeading } from "../../components/header/SubHeading";
 
 const contact = () => {
   return (
     <div className="main">
       <MainSidebar />
       <div className="body">
-        <FirstHeader></FirstHeader>
-        <MainHeading></MainHeading>
+        <div className="contact-container">
+          <SubHeading />
+          <div className="contact-table">
+            <TableData />
+          </div>
+        </div>
       </div>
     </div>
   );

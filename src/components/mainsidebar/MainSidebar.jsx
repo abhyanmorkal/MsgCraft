@@ -1,8 +1,7 @@
-import React from "react";
 import "./MainSidebar.scss";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import IconFrame from "../iconfram/IconFram";
-import logo from "./assets/logo.svg";
+import logo from "../../assets/logo.svg";
 import icon from "./assets/Chat.svg";
 import contacts from "./assets/contacts.svg";
 import campaign from "./assets/campaign.svg";

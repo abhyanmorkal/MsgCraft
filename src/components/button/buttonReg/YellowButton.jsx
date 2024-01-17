@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./YellowButton.scss";
+import PropTypes from "prop-types";
 
-const YellowButton = ({ title }) => {
+const YellowButton = ({ title, padding, onDrawerOpen }) => {
   const [ripple, setRipple] = useState({});
 
   const handleClick = (event) => {
@@ -23,10 +24,15 @@ const YellowButton = ({ title }) => {
     setTimeout(() => {
       setRipple({ ...ripple, active: false });
     }, 600); // Adjust the duration of the ripple effect
+    onDrawerOpen && onDrawerOpen();
   };
   return (
     <div className="yellow-button-container">
-      <button className="yellow-ripple-button" onClick={handleClick}>
+      <button
+        className="yellow-ripple-button"
+        style={{ padding: padding }}
+        onClick={handleClick}
+      >
         {title}
         {ripple.active && (
           <div className="yellow-ripple" style={ripple.style}></div>
@@ -34,6 +40,12 @@ const YellowButton = ({ title }) => {
       </button>
     </div>
   );
+};
+
+YellowButton.propTypes = {
+  title: PropTypes.string.isRequired,
+  padding: PropTypes.string,
+  onDrawerOpen: PropTypes.func,
 };
 
 export default YellowButton;
