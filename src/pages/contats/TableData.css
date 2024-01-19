@@ -3,12 +3,10 @@
   margin-bottom: 8px !important;
 }
 
-.tableNameBox {
-  :hover {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgba(255, 57, 57, 0.043);
-  }
+.tableNameBox :hover {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 57, 57, 0.043);
 }
 
 .statusactive {
@@ -16,13 +14,15 @@
   padding: 5px;
   border-radius: 5px;
 }
+
 .statuspending {
   background-color: rgba(246, 255, 80, 0.413);
   padding: 5px;
   border-radius: 5px;
 }
+
 .statusdeactive {
   background-color: rgba(255, 80, 80, 0.413);
   padding: 5px;
   border-radius: 5px;
-}
+}/*# sourceMappingURL=TableData.css.map */

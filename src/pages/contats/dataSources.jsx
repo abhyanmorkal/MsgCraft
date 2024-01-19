@@ -1,6 +1,8 @@
-import * as React from "react";
-import Drawer from "@mui/material/Drawer";
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import icon from "../../assets/setting.svg";
+import "./TableData.scss";
+import OpenDrawer from "../../components/Drawer/Drawer";
 export const userColomn = [
   { field: "id", headerName: "ID", width: 70 },
   {
@@ -20,6 +22,9 @@ export const userColomn = [
     field: "status",
     headerName: "Status",
     width: 100,
+    renderCell: (params) => {
+      return <ActionStatus status={params.row.status} />;
+    },
   },
   {
     field: "email",
@@ -63,7 +68,7 @@ export const userRow = [
     name: "Abhyan Morkal",
     path: "?hash=",
     whatsapp: "+911234567001",
-    status: "active",
+    status: "pending",
     email: "xyz@gmail.com",
     address: "xyz",
     instuteName: "xyz University",
@@ -74,7 +79,7 @@ export const userRow = [
     id: 2,
     name: "Abhyan Morkal",
     whatsapp: "+911234567001",
-    status: "active",
+    status: "deactive",
     email: "xyz@gmail.com",
     address: "xyz",
     instuteName: "xyz University",
@@ -118,7 +123,7 @@ export const userRow = [
     id: 6,
     name: "Abhyan Morkal",
     whatsapp: "+911234567001",
-    status: "active",
+    status: "deactive",
     email: "xyz@gmail.com",
     address: "xyz",
     instuteName: "xyz University",
@@ -173,7 +178,7 @@ export const userRow = [
     id: 11,
     name: "Abhyan Morkal",
     whatsapp: "+911234567001",
-    status: "active",
+    status: "deactive",
     email: "xyz@gmail.com",
     address: "xyz",
     instuteName: "xyz University",
@@ -281,21 +286,20 @@ export const userRow = [
   },
 ];
 
+// eslint-disable-next-line react-refresh/only-export-components, react/prop-types
 function ActionsCell({ row }) {
-  const [drawerOpen, setDrawerOpen] = React.useState(false);
-
-  const handleOpenDrawer = () => {
-    setDrawerOpen(true);
+  const [open, setOpen] = useState(false);
+  const handleDrawerOpen = () => {
+    setOpen(true);
   };
-
-  const handleCloseDrawer = () => {
-    setDrawerOpen(false);
+  const onClose = () => {
+    setOpen(false);
   };
 
   return (
-    <div>
+    <div className="tableNameBox">
       <div
-        onClick={handleOpenDrawer}
+        onClick={handleDrawerOpen}
         style={{
           display: "flex",
           alignItems: "center",
@@ -314,13 +318,15 @@ function ActionsCell({ row }) {
           }}
         />
       </div>
-      <Drawer anchor="right" open={drawerOpen} onClose={handleCloseDrawer}>
-        <div style={{ wiedth: "340px" }}>
-          <p>Information</p>
-          {row.name}
-          {/* Add additional information from the row as needed */}
-        </div>
-      </Drawer>
+      <OpenDrawer
+        title="Add Contact"
+        onClose={onClose}
+        open={open}
+      ></OpenDrawer>
     </div>
   );
+}
+
+function ActionStatus(status) {
+  return <div className={`status${status.status}`}>{status.status}</div>;
 }

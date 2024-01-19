@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import { userColomn, userRow } from "./dataSources";
+import "./TableData.scss";
 
 export default function TabelData() {
   return (

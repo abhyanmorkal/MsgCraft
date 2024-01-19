@@ -1,8 +1,8 @@
 import "../../pages/contats/contact.scss";
 import { useState } from "react";
-import { Input, Drawer } from "antd";
+import { Input } from "antd";
 import YellowButton from "../../components/button/buttonReg/yellowButton";
-import ContactForm from "../form/Form";
+import OpenDrawer from "../Drawer/Drawer";
 
 const { Search } = Input;
 const onSearch = (value, _e, info) => console.log(info?.source, value);
@@ -13,12 +13,6 @@ export const SubHeading = () => {
   };
   const onClose = () => {
     setOpen(false);
-  };
-
-  const onSubmit = (data) => {
-    // Simulate adding contact to the database
-    console.log("Contact data:", data);
-    // Add your logic to send data to the database here
   };
 
   return (
@@ -32,9 +26,10 @@ export const SubHeading = () => {
           onSearch={onSearch}
         />
         <YellowButton title="IMPORT CONTACT" padding="0.8rem 0.7rem" />
-        <Drawer title="Add Contacts" onClose={onClose} open={open}>
+        {/* <Drawer title="Add Contacts" onClose={onClose} open={open}>
           <ContactForm onSubmit={onSubmit} />
-        </Drawer>
+        </Drawer> */}
+        <OpenDrawer title="Add Contact" onClose={onClose} open={open} />
         <YellowButton
           title="ADD CONTACT"
           padding="0.8rem 0.7rem"
