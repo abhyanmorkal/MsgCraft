@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Segmented, ConfigProvider, DatePicker } from "antd";
 import MainSidebar from "../../components/mainsidebar/MainSidebar";
-import "./analytic.css";
+import "./analytic.scss";
 import YellowButton from "../../components/button/buttonReg/yellowButton";
+import Analyticbody from "./Analyticbody";
 const { RangePicker } = DatePicker;
 
-const analytic = () => {
+const Analytic = () => {
   return (
     <div className="main">
       <MainSidebar />
@@ -21,13 +22,14 @@ const analytic = () => {
           </div>
         </div>
         <hr />
-        <div id="content-body"></div>
+        <div id="content-body">
+          <Analyticbody />
+        </div>
       </div>
     </div>
   );
 };
-
-export default analytic;
+export default Analytic;
 
 export const Tab = () => {
   const [value, setValue] = useState("conversation");
