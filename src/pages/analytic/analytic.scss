@@ -5,8 +5,9 @@
 
   // min-height: 100vh;
 }
-.body {
+.body-analytic {
   width: 100%;
+  overflow-y: auto;
 }
 #content-heading {
   padding: 1rem 3rem;

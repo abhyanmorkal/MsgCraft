@@ -22,9 +22,8 @@
   height: 90vh;
   // background-color: blue;
   overflow-y: auto;
-  ::-webkit-scrollbar {
-    display: none;
-  }
+  // ::-webkit-scrollbar {
+  //   display: none;
 }
 .search {
   padding: 1rem;
@@ -39,10 +38,10 @@
   overflow-y: auto;
 }
 
-::-webkit-scrollbar {
-  width: 0.2em;
-}
-::-webkit-scrollbar-thumb {
-  background: #ba2525;
-  // border-radius: 1em;
-}
+// ::-webkit-scrollbar {
+//   width: 0.2em;
+// }
+// ::-webkit-scrollbar-thumb {
+//   background: #ba2525;
+//   // border-radius: 1em;
+// }
