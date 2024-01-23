@@ -11,7 +11,6 @@
 }
 .body-container {
   @include displayFlex(normal, normal, 0);
-  // overflow: hidden;
 }
 
 .contact-area {
@@ -20,14 +19,11 @@
 }
 .chat-wraper {
   height: 90vh;
-  // background-color: blue;
+
   overflow-y: auto;
-  // ::-webkit-scrollbar {
-  //   display: none;
 }
 .search {
-  padding: 1rem;
-  height: 66px;
+  padding: 0.9rem;
 
   border-bottom: 1px solid #32323275;
 }
@@ -37,11 +33,3 @@
   margin: 5px;
   overflow-y: auto;
 }
-
-// ::-webkit-scrollbar {
-//   width: 0.2em;
-// }
-// ::-webkit-scrollbar-thumb {
-//   background: #ba2525;
-//   // border-radius: 1em;
-// }

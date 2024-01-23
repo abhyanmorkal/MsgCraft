@@ -5,6 +5,11 @@ import { ConfigProvider } from "antd";
 
 const Dashboard = lazy(() => import("./pages/dashboard-paid"));
 const DashboardUnP = lazy(() => import("./pages/dashboard-unpaid"));
+const Profile = lazy(() => import("./pages/profile/profile"));
+const UserProfile = lazy(() => import("./pages/profile/UserProfile"));
+const BusinessProfile = lazy(() => import("./pages/profile/BusinessProfile"));
+const UpgradePlans = lazy(() => import("./pages/profile/UpgradePlans"));
+const ActivePlans = lazy(() => import("./pages/profile/ActivePlans"));
 const Chat = lazy(() => import("./pages/chat/chat"));
 const Contact = lazy(() => import("./pages/contats/contact"));
 const Automation = lazy(() => import("./pages/automation/automation"));
@@ -28,6 +33,15 @@ function App() {
           <Routes>
             {/* Main pages */}
             <Route path="/" element={<Dashboard />} />
+            <Route path="/admin/profile" element={<Profile />}>
+              <Route path="user/:id" element={<UserProfile />} />
+              <Route
+                path="business-profile/:id"
+                element={<BusinessProfile />}
+              />
+              <Route path="upgrade-plans" element={<UpgradePlans />} />
+              <Route path="active-plans" element={<ActivePlans />} />
+            </Route>
             <Route path="/admin/dashboardUnp" element={<DashboardUnP />} />
             <Route path="/admin/chat" element={<Chat />} />
             <Route path="/admin/contact" element={<Contact />} />

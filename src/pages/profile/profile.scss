@@ -1,0 +1,9 @@
+@import "../../styles/mixin";
+.main {
+  display: flex;
+  width: 100%;
+}
+.body-profile {
+  width: 100vw;
+  background-color: $clr-background;
+}

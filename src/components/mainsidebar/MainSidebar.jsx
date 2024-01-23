@@ -18,9 +18,11 @@ const MainSidebar = () => {
       <Link to="/" location={location}>
         <img className="logo" src={logo} />
       </Link>
-      <div className="profile">
-        <p>{profileName}</p>
-      </div>
+      <Link to="/admin/profile" location={location}>
+        <div className="profile">
+          <p>{profileName}</p>
+        </div>
+      </Link>
       <div className="menuContener">
         <Link to="/admin/chat" location={location}>
           <IconFrame
