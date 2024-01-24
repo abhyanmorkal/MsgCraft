@@ -10,7 +10,7 @@ const Analytic = () => {
   return (
     <div className="main">
       <MainSidebar />
-      <div className="body">
+      <div className="body-analytic">
         <div id="content-heading">
           <div id="heading-group">
             <h2 id="heading">Analytic</h2>

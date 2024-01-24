@@ -10,7 +10,7 @@ function Dashboard() {
   return (
     <div className="main">
       <MainSidebar />
-      <div className="body">
+      <div className="body-dashboard">
         <FirstHeader></FirstHeader>
         <MainHeading></MainHeading>
         <div className="main-container">

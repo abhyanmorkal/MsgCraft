@@ -1,20 +1,35 @@
-import React from "react";
-import MainSidebar from "../../components/mainsidebar/MainSidebar";
-import FirstHeader from "../../components/header/FirstHeader";
-import MainHeading from "../../components/header/MainHeading";
-import "./help.scss"
+// import MainSidebar from "../../components/mainsidebar/MainSidebar";
+// import FirstHeader from "../../components/header/FirstHeader";
+// import MainHeading from "../../components/header/MainHeading";
+// import { useFloating } from "@floating-ui/react";
+// import { useState } from "react";
+// import "./help.scss";
+// // import { Menu } from 'antd';
 
+// const help = () => {
+//   const [isOpen, setIsOpen] = useState();
 
-const help = () => {
-  return (
-    <div className="main">
-      <MainSidebar />
-      <div className="body">
-        <FirstHeader></FirstHeader>
-        <MainHeading></MainHeading>
-      </div>
-    </div>
-  );
-};
+//   const { refs, floatingStyles } = useFloating({
+//     open: isOpen,
+//     onOpenChange: setIsOpen,
+//   });
+//   return (
+//     <div className="main">
+//       <MainSidebar />
+//       <div className="body">
+//         <FirstHeader></FirstHeader>
+//         <MainHeading></MainHeading>
+//         <button ref={refs.setReference} onClick={() => setIsOpen(true)}>
+//           Button
+//         </button>
+//         {isOpen && (
+//           <div ref={refs.setFloating} style={floatingStyles}>
+//             hello world2
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
 
-export default help;
+// export default help;
