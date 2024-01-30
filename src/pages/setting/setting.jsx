@@ -65,10 +65,10 @@ export const items = [
     "sub2",
     null,
     [
-      getItem("Labels Plan", "labels-plan", <ReconciliationOutlined />),
+      getItem("Labels Plan", "labels", <ReconciliationOutlined />),
       getItem("Custom Fields", "custom-fields", <PullRequestOutlined />),
       getItem("Status", "status", <ProjectOutlined />),
-      getItem("Quick Reply", "Quick-reply", <ThunderboltOutlined />),
+      getItem("Quick Reply", "quick-reply", <ThunderboltOutlined />),
     ],
     "group"
   ),
@@ -77,8 +77,8 @@ export const items = [
     "sub3",
     null,
     [
-      getItem("Developers API", "dev-api", <AppstoreOutlined />),
-      getItem("App Integration", "app-integration", <DollarOutlined />),
+      getItem("Developers API", "dev-api/:id", <AppstoreOutlined />),
+      getItem("App Integration", "app/:id", <DollarOutlined />),
     ],
     "group"
   ),
