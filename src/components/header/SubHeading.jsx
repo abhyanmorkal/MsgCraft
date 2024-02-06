@@ -26,9 +26,6 @@ export const SubHeading = () => {
           onSearch={onSearch}
         />
         <YellowButton title="IMPORT CONTACT" padding="0.8rem 0.7rem" />
-        {/* <Drawer title="Add Contacts" onClose={onClose} open={open}>
-          <ContactForm onSubmit={onSubmit} />
-        </Drawer> */}
         <OpenDrawer title="Add Contact" onClose={onClose} open={open} />
         <YellowButton
           title="ADD CONTACT"

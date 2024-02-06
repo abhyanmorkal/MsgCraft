@@ -33,3 +33,9 @@
   margin: 5px;
   overflow-y: auto;
 }
+
+.blankScreen {
+  width: 100%;
+  @include displayFlex(center, center, 0);
+  flex-direction: column;
+}
