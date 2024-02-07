@@ -6,8 +6,7 @@
 }
 .yellow-ripple-button {
   position: relative;
-  @include displayFlex(center, normal, 0.5rem);
-  border-radius: 5px;
+  @include displayFlex(center, center, 0.5rem);
   overflow: hidden;
   background-color: $clr-darkYellow;
   color: $clr-darkBrown;

@@ -1,17 +1,22 @@
 // components/SignupForm.js
 import { useState } from "react";
+import "./signupform.scss";
+import YellowButton from "../button/buttonReg/yellowButton";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
 
 // eslint-disable-next-line react/prop-types
 const SignupForm = ({ onSignup }) => {
   const [formData, setFormData] = useState({
     name: "",
+    number: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target || e;
     setFormData({
       ...formData,
       [name]: value,
@@ -31,12 +36,26 @@ const SignupForm = ({ onSignup }) => {
         <input
           type="text"
           name="name"
+          placeholder="Name"
           value={formData.name}
           onChange={handleInputChange}
           required
         />
       </label>
       <br />
+      <label>
+        Phone:
+        <PhoneInput
+          className="phoneinput"
+          defaultCountry="in"
+          name="number"
+          value={formData.number}
+          onChange={handleInputChange}
+          inputProps={{
+            required: true,
+          }}
+        />
+      </label>
       <label>
         Email:
         <input
@@ -70,7 +89,7 @@ const SignupForm = ({ onSignup }) => {
         />
       </label>
       <br />
-      <button type="submit">Signup</button>
+      <YellowButton title="Sign Up" padding={"15px"} borderRadius="8px" />
     </form>
   );
 };

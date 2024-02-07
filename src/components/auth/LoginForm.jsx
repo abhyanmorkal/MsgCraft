@@ -1,6 +1,6 @@
-// components/LoginForm.js
 import { useState } from "react";
-
+import "./loginform.scss";
+import YellowButton from "../button/buttonReg/yellowButton";
 // eslint-disable-next-line react/prop-types
 const LoginForm = ({ onLogin }) => {
   const [formData, setFormData] = useState({
@@ -46,7 +46,7 @@ const LoginForm = ({ onLogin }) => {
         />
       </label>
       <br />
-      <button type="submit">Login</button>
+      <YellowButton title="Login" padding={"15px"} borderRadius="8px" />
     </form>
   );
 };
