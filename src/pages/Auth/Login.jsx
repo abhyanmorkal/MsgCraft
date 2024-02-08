@@ -1,30 +1,29 @@
 // pages/Auth/Login.js
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
 import LoginForm from "../../components/auth/LoginForm"; // Adjust the path based on your project structure
 import "./login.scss";
 import FirstHeader from "../../components/header/FirstHeader";
 import LeftArea from "./LeftArea";
 import { Link } from "react-router-dom";
 import Google from "../../assets/googlelogo.svg";
-import Registration from "./Registration";
 
 const Login = () => {
-  const navigate = useNavigate();
-  const { login } = useAuth();
-
-  const handleLogin = (formData) => {
-    const isValidUser = login(formData);
-
-    if (isValidUser) {
-      // Redirect to the dashboard if login is successful
-      navigate("/");
-      console.log(formData);
-    } else {
-      // Handle login failure (display error message, etc.)
-      console.error("Invalid credentials");
-    }
+  const handleLogin = () => {
+    console.log("login:");
   };
+
+  // const navigate = useNavigate();
+  // const handleLogin = (formData) => {
+  //   const isValidUser = login(formData);
+
+  //   if (isValidUser) {
+  //     // Redirect to the dashboard if login is successful
+  //     navigate("/");
+  //     console.log(formData);
+  //   } else {
+  //     // Handle login failure (display error message, etc.)
+  //     console.error("Invalid credentials");
+  //   }
+  // };
 
   return (
     <>

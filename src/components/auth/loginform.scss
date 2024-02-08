@@ -15,7 +15,7 @@ label {
   font-size: 0.8rem;
   color: $clr-subheading;
 }
-input[type="text"]:focus {
+input:focus {
   border: 1px solid rgba(105, 126, 130, 0.923);
 }
 

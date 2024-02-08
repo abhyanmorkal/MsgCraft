@@ -1,4 +1,3 @@
-import React from "react";
 import "./MainHeading.scss";
 import plan from "./assets/Ticket.svg";
 import notification from "./assets/Notification.svg";

@@ -8,7 +8,7 @@ import {
 import { Suspense, lazy } from "react";
 import Loading from "./components/Loading";
 import { ConfigProvider } from "antd";
-import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "../routes/protectedRoute";
 
 const Login = lazy(() => import("./pages/Auth/Login"));
 const Registration = lazy(() => import("./pages/Auth/Registration"));
@@ -35,7 +35,7 @@ const CustomField = lazy(() => import("./pages/setting/CustomField"));
 const Status = lazy(() => import("./pages/setting/Status"));
 const QuickReply = lazy(() => import("./pages/setting/QuickReply"));
 const DevApi = lazy(() => import("./pages/setting/DevApi"));
-const AppIntegration = lazy(() => import("./pages/setting/AppIntegration"));
+// const AppIntegration = lazy(() => import("./pages/setting/AppIntegration"));
 
 // eslint-disable-next-line react/prop-types
 
@@ -64,53 +64,117 @@ function App() {
         },
       }}
     >
-      <AuthProvider>
-        <Router>
-          <Suspense fallback={<Loading />}>
-            <Routes>
-              {/* Force login and signup */}
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Registration />} />
-              {/* Main pages */}
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/admin/profile" element={<Profile />}>
-                <Route index element={<Navigate to="user/1" />} />
-                <Route path="user/:id" element={<UserProfile />} />
-                <Route
-                  path="business-profile/:id"
-                  element={<BusinessProfile />}
-                />
-                <Route path="upgrade-plans" element={<UpgradePlans />} />
-                <Route path="active-plans" element={<ActivePlans />} />
-              </Route>
-              <Route path="/admin/chat" element={<Chat />}>
-                <Route path="Conversions" element={<Conversion />} />
-              </Route>
-              <Route path="/admin/contact" element={<Contact />} />
-              <Route path="/admin/campaign" element={<Campaign />} />
-              <Route path="/admin/automation" element={<Automation />} />
-              <Route path="/admin/analytic" element={<Analytic />} />
-              <Route path="/admin/help" element={<Help />} />
-              <Route path="/admin/setting" element={<Setting />}>
-                <Route path="wapi" element={<Wapi />} />
-                <Route path="templates" element={<Templates />} />
-                <Route
-                  path="templates-gallery"
-                  element={<TemplatesGallery />}
-                />
-                <Route path="media" element={<Media />} />
-                <Route path="labels" element={<Label />} />
-                <Route path="custom-fields" element={<CustomField />} />
-                <Route path="status" element={<Status />} />
-                <Route path="quick-reply" element={<QuickReply />} />
-                <Route path="dev-api/:id" element={<DevApi />} />
-                <Route path="app/:id" element={<AppIntegration />} />
-              </Route>
-              <Route path="/*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </Router>
-      </AuthProvider>
+      <Router>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            {/* Force login and signup */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Registration />} />
+            {/* Main pages */}
+            <Route
+              path="/"
+              element={<ProtectedRoute Component={Dashboard} />}
+            />
+            <Route
+              path="/admin/profile"
+              element={<ProtectedRoute Component={Profile} />}
+            >
+              <Route index element={<Navigate to="user/1" />} />
+              <Route path="user/:id" element={<UserProfile />} />
+              <Route
+                path="business-profile/:id"
+                element={<ProtectedRoute Component={BusinessProfile} />}
+              />
+              <Route
+                path="upgrade-plans"
+                element={<ProtectedRoute Component={UpgradePlans} />}
+              />
+              <Route
+                path="active-plans"
+                element={<ProtectedRoute Component={ActivePlans} />}
+              />
+            </Route>
+            <Route
+              path="/admin/chat"
+              element={<ProtectedRoute Component={Chat} />}
+            >
+              <Route
+                path="conversions"
+                element={<ProtectedRoute Component={Conversion} />}
+              />
+            </Route>
+            <Route
+              path="/admin/contact"
+              element={<ProtectedRoute Component={Contact} />}
+            />
+            <Route
+              path="/admin/campaign"
+              element={<ProtectedRoute Component={Campaign} />}
+            />
+            <Route
+              path="/admin/automation"
+              element={<ProtectedRoute Component={Automation} />}
+            />
+            <Route
+              path="/admin/analytic"
+              element={<ProtectedRoute Component={Analytic} />}
+            />
+            <Route
+              path="/admin/help"
+              element={<ProtectedRoute Component={Help} />}
+            />
+            <Route
+              path="/admin/setting"
+              element={<ProtectedRoute Component={Setting} />}
+            >
+              <Route
+                path="wapi"
+                element={<ProtectedRoute Component={Wapi} />}
+              />
+              <Route
+                path="templates"
+                element={<ProtectedRoute Component={Templates} />}
+              />
+              <Route
+                path="templates-gallery"
+                element={<ProtectedRoute Component={TemplatesGallery} />}
+              />
+              <Route
+                path="media"
+                element={<ProtectedRoute Component={Media} />}
+              />
+              <Route
+                path="labels"
+                element={<ProtectedRoute Component={Label} />}
+              />
+              <Route
+                path="custom-fields"
+                element={<ProtectedRoute Component={CustomField} />}
+              />
+              <Route
+                path="status"
+                element={<ProtectedRoute Component={Status} />}
+              />
+              <Route
+                path="quick-reply"
+                element={<ProtectedRoute Component={QuickReply} />}
+              />
+              <Route
+                path="dev-api/:id"
+                element={<ProtectedRoute Component={DevApi} />}
+              />
+              <Route
+                path="app/:id"
+                element={<ProtectedRoute Component={App} />}
+              />
+            </Route>
+            <Route
+              path="/*"
+              element={<ProtectedRoute Component={NotFound} />}
+            />
+          </Routes>
+        </Suspense>
+      </Router>
     </ConfigProvider>
   );
 }
