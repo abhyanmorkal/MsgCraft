@@ -2,18 +2,16 @@
 
 .yellow-button-container {
   flex-wrap: nowrap;
-  @include displayFlex(center, center, 0);
+  @include displayFlex(center, normal, 0);
 }
 .yellow-ripple-button {
   position: relative;
-  @include displayFlex(center, normal, 0.5rem);
-  border-radius: 5px;
+  @include displayFlex(center, center, 0.5rem);
   overflow: hidden;
-  background-color: $clr-darkYellow;
+
   color: $clr-darkBrown;
   border: none;
   font-weight: 600;
-
   font-size: 0.8rem;
   cursor: pointer;
   outline: none;

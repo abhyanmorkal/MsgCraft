@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AppstoreOutlined, MailOutlined, FundFilled } from "@ant-design/icons";
 import { Menu } from "antd";
 import "./infobox.scss";
+import Divider from "@mui/material/Divider";
 
 const rootSubmenuKeys = ["sub1", "sub2", "sub4"];
 const Infobox = () => {
@@ -19,7 +20,7 @@ const Infobox = () => {
       <div className="heading">
         <h2 id="heading">Chat</h2>
       </div>
-      <hr />
+      <Divider />
       <div className="menu">
         <Menu
           mode="inline"

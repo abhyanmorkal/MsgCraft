@@ -7,29 +7,51 @@
 .body {
   width: 100%;
   height: 100vh;
+  position: relative;
   overflow: hidden;
 }
-.body-container {
+.sidebar {
+  width: 100%;
+  overflow: hidden;
   @include displayFlex(normal, normal, 0);
 }
-
-.contact-area {
+.message-container {
+  @include displayFlex(normal, normal, 0);
+  width: 100%;
+}
+.message-sidebar {
   width: 20rem;
-  border-right: 1px solid #32323275;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid grey;
 }
-.chat-wraper {
-  height: 90vh;
+.mb-header {
+  @include displayFlex(center, space-between, 0);
+  height: 72px;
+}
 
+.mb-search {
+  height: 60px;
+  @include displayFlex(center, space-between, 0);
+  padding: 0 20px;
+}
+
+.mb-conversion {
+  height: calc(100vh - 60px - 60px);
   overflow-y: auto;
 }
-.search {
-  padding: 0.9rem;
-
-  border-bottom: 1px solid #32323275;
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: $clr-lightHeading;
+  padding: 2px;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(128, 128, 128, 0.599);
 }
 
-.chat-list {
-  border-radius: 8px;
-  margin: 5px;
-  overflow-y: auto;
+.workArea {
+  flex: 1;
 }
