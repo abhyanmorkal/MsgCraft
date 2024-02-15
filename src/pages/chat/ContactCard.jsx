@@ -1,12 +1,10 @@
 import "react-chat-elements/dist/main.css";
 import { ChatList } from "react-chat-elements";
-import { Input } from "antd";
-const { Search } = Input;
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./contactcard.scss";
 
-const onSearch = (value, _e, info) => console.log(info?.source, value);
 // eslint-disable-next-line react/prop-types
 const ContactCard = ({ onContactClick }) => {
   const storedChatList = JSON.parse(localStorage.getItem("chatList")) || [];
@@ -41,35 +39,25 @@ const ContactCard = ({ onContactClick }) => {
   }, []);
 
   return (
-    <div>
-      <div className="contact-area">
-        <div className="search">
-          <Search
-            placeholder="input search text"
-            enterButton="Search"
-            size="medium"
-            onSearch={onSearch}
-          />
-        </div>
-        {/* <ContactCard /> */}
-        <div className="chat-wraper">
-          <ChatList
-            className="chat-list"
-            dataSource={categoryList.map((category) => ({
-              title: category.category_name,
-              avatar: "https://avatars.githubusercontent.com/u/80540635?v=8",
-              alt: "kursat_avatar",
-              subtitle: category.category_description,
-              date: new Date(),
-              unread: category.status,
+    <>
+      {/* <ContactCard /> */}
+      <div className="chat-wraper">
+        <ChatList
+          className="chat-list"
+          dataSource={categoryList.map((category) => ({
+            title: category.category_name,
+            avatar: "https://avatars.githubusercontent.com/u/80540635?v=8",
+            alt: "kursat_avatar",
+            subtitle: category.category_description,
+            date: new Date(),
+            unread: category.status,
 
-              // Add other properties if needed
-            }))}
-            onClick={onContactClick}
-          />
-        </div>
+            // Add other properties if needed
+          }))}
+          onClick={onContactClick}
+        />
       </div>
-    </div>
+    </>
   );
 };
 
