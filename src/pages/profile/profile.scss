@@ -9,11 +9,11 @@
 }
 
 #user-profile {
-  // width: 100%;
   margin: 1rem;
+  width: 50%;
   border-radius: 10px;
   padding: 1rem;
-  height: 15rem;
+  height: 10rem;
   border: 1px solid #32323275;
 }
 #business-profile {
@@ -60,6 +60,7 @@
   justify-content: space-between;
   gap: 2rem;
 }
+
 .pi-heading {
   font-weight: 500;
   margin-bottom: 10px;

@@ -7,24 +7,6 @@ import { Link } from "react-router-dom";
 import Google from "../../assets/googlelogo.svg";
 
 const Login = () => {
-  const handleLogin = () => {
-    console.log("login:");
-  };
-
-  // const navigate = useNavigate();
-  // const handleLogin = (formData) => {
-  //   const isValidUser = login(formData);
-
-  //   if (isValidUser) {
-  //     // Redirect to the dashboard if login is successful
-  //     navigate("/");
-  //     console.log(formData);
-  //   } else {
-  //     // Handle login failure (display error message, etc.)
-  //     console.error("Invalid credentials");
-  //   }
-  // };
-
   return (
     <>
       <FirstHeader />
@@ -53,7 +35,7 @@ const Login = () => {
             </p>
           </div>
           <div>
-            <LoginForm onSignup={handleLogin} />
+            <LoginForm />
           </div>
           <div className="horizontal-line-container">
             <div className="line"></div>

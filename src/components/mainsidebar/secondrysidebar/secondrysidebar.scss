@@ -1,10 +1,11 @@
 @import "../../../styles/mixin";
 
 .sec-container {
-  width: 20rem;
+  // width: 20rem;
+  height: 100vh;
   border-right: 1px solid #32323275;
   .profile-heading {
-    margin-top: 10px;
+    // margin-top: 10px;
     padding: 1rem;
     @extend %heading;
     color: $clr-heading;

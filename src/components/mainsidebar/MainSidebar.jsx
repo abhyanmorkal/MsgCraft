@@ -50,7 +50,7 @@ const MainSidebar = () => {
         <Link to="/admin/setting" location={location}>
           <IconFrame title="Settings" src={setting} alt={"chat icon"} />
         </Link>
-        <Link to="/admin/help" location={location}>
+        <Link to="/admin/help/introduction" location={location}>
           <IconFrame title="Help" src={help} alt={"chat icon"} />
         </Link>
       </div>

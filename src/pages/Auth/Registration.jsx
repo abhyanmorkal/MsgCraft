@@ -6,17 +6,6 @@ import "./registration.scss";
 import Google from "../../assets/googlelogo.svg";
 
 const Registration = () => {
-  const handleSignup = async () => {
-    try {
-      // TODO: Perform your registration API request or logic here
-      // Example: const response = await authService.register(formData);
-      // Handle successful registration (redirect, display message, etc.)
-    } catch (error) {
-      console.error("Registration error:", error);
-      // Handle registration error (display error message, etc.)
-    }
-  };
-
   return (
     <>
       <FirstHeader />
@@ -32,8 +21,6 @@ const Registration = () => {
             padding: "1.5rem 7rem",
             display: "flex",
             flexDirection: "column",
-            // alignItems: "center",
-            // justifyContent: "space-around",
           }}
         >
           <div className="link" style={{ marginBottom: "20px" }}>
@@ -46,7 +33,7 @@ const Registration = () => {
             </p>
           </div>
           <div>
-            <SignupForm onSignup={handleSignup} />
+            <SignupForm />
           </div>
           <div className="horizontal-line-container">
             <div className="line"></div>

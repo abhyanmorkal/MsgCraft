@@ -6,11 +6,12 @@ const ProtectedRoute = ({ Component, ...rest }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    let login = localStorage.getItem("login");
-    if (!login) {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      // Redirect to the login page if token is not present
       navigate("/login");
     }
-  }, []);
+  }); // Removed navigate from the dependency array
 
   return (
     <>
