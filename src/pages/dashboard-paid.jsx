@@ -5,6 +5,32 @@ import MainHeading from "../components/header/MainHeading";
 import Infobox from "../components/infobox/infobox";
 import { Card } from "antd";
 import Button from "../components/button/Button";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
+
+const infoBoxData = [
+  {
+    link: "/admin/help/introduction",
+    title: "Current's Updates",
+    body: "Introducing Messbee Business, leveraging the WhatsApp Official",
+  },
+  {
+    link: "/admin/help/introduction",
+    title: "Share WhatsApp Api",
+    body: "Check  WhatsApp Api profile",
+  },
+  {
+    link: "/admin/help/introduction",
+    title: "What's new",
+    body: "In manage team, defining various roles like manager, team member & custom.",
+  },
+  {
+    link: "/admin/help/introduction",
+    title: "What's new",
+    body: "In manage team, defining various roles like manager, team member & custom.",
+  },
+];
 
 function Dashboard() {
   return (
@@ -20,22 +46,16 @@ function Dashboard() {
           <hr></hr>
           <div className="content">
             <div className="left">
-              <Infobox
-                title="Today’s update"
-                body="Delay of 24hrs is needed to refresh data"
-              />
-              <Infobox
-                title="Share WhatsApp Api"
-                body="Check  WhatsApp Api profile"
-              />
-              <Infobox
-                title="What's new"
-                body="In manage team, defining various roles like manager, team member & custom."
-              />
-              <Infobox
-                title="What's new"
-                body="In manage team, defining various roles like manager, team member & custom."
-              />
+              {infoBoxData.map((data, index) => {
+                return (
+                  <Infobox
+                    key={index}
+                    title={data.title}
+                    link={data.link}
+                    body={data.body}
+                  />
+                );
+              })}
             </div>
 
             {/* ///center content area/// */}
@@ -87,7 +107,13 @@ function Dashboard() {
                 </div>
               </Card>
             </div>
-            <div className="right"></div>
+            <div className="right">
+              <div className="date">
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DateCalendar />
+                </LocalizationProvider>
+              </div>
+            </div>
           </div>
         </div>
         <div className="bottom-container">
@@ -116,15 +142,3 @@ function Dashboard() {
   );
 }
 export default Dashboard;
-
-{
-  /* <div
-  className="button"
-  onClick={() => {
-    console.log("hello world");
-  }}
->
-  <img src={ButtonIcon} alt="payment icon" />
-  <strong>New Payment</strong>
-</div> */
-}
