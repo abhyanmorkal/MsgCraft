@@ -7,6 +7,7 @@ import { SubHeading } from "../../components/header/SubHeading";
 import YellowButton from "../../components/button/buttonReg/yellowButton";
 
 const contact = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [open, setOpen] = useState(false);
   const handleDrawerOpen = () => {
     setOpen(true);

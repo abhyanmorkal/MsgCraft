@@ -18,6 +18,7 @@ const Conversion = lazy(() => import("./pages/chat/Conversion"));
 const Contact = lazy(() => import("./pages/contats/contact"));
 const Automation = lazy(() => import("./pages/automation/automation"));
 const Campaign = lazy(() => import("./pages/campaign/campaign"));
+const CreateCampaign = lazy(() => import("./pages/campaign/CreateCampaign"));
 const Analytic = lazy(() => import("./pages/analytic/analytic"));
 const Help = lazy(() => import("./pages/help/help"));
 const Setting = lazy(() => import("./pages/setting/setting"));
@@ -98,6 +99,11 @@ function App() {
             path="/admin/campaign"
             element={<ProtectedRoute Component={Campaign} />}
           />
+          <Route
+            path="/admin/campaign-create"
+            element={<ProtectedRoute Component={CreateCampaign} />}
+          />
+
           <Route
             path="/admin/automation"
             element={<ProtectedRoute Component={Automation} />}

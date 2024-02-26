@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
@@ -6,7 +7,7 @@ import "./TableData.scss";
 
 export default function TabelData() {
   return (
-    <Box sx={{ height: "85vh", width: "92vw" }}>
+    <Box sx={{ height: "88vh", width: "93vw" }}>
       <DataGrid
         rowHeight={35}
         rows={userRow}

@@ -62,13 +62,7 @@ const UpgradePlans = () => {
         <div className="plans-body">
           {footerCard.map(({ heading, body, price, footerData }, index) => {
             return (
-              <div
-                key={index}
-                className="plans-container"
-                style={{
-                  background: "#fadb5f5a",
-                }}
-              >
+              <div key={index} className="plans-container">
                 <div className="plans-heading">
                   <p>{heading}</p>
                 </div>
@@ -123,7 +117,7 @@ const footerCard = [
         text: "Unlimited contacts",
       },
       {
-        text: "Message, Conversation, Campaign Analytics is included",
+        text: "Conversation, Campaign Analytics is included",
       },
     ],
   },
