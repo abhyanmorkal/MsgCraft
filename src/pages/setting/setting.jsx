@@ -76,10 +76,7 @@ export const items = [
     "API & Integration",
     "sub3",
     null,
-    [
-      getItem("Developers API", "dev-api/:id", <AppstoreOutlined />),
-      getItem("App Integration", "app/:id", <DollarOutlined />),
-    ],
+    [getItem("Developers API", "dev-api/:id", <AppstoreOutlined />)],
     "group"
   ),
 ];
